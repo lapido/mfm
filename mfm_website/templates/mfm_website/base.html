@@ -1,0 +1,69 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta lang="en">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Play:400,700|Josefin+Sans:400,300italic,400italic,300|Aldrich:400">
+		<title>Template</title>
+	</head>
+	<body>
+		<section class="section-header">
+			<nav class="default-navbar remove-header-margin">
+				<div class="mobile-header">
+					<button type="button" class="mobile-toggle"> 
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</button>
+					<a href="#" class="mobile-logo">
+						<b>M.F.M.C.F</b>
+					</a>
+				</div>
+
+				<div class="default-links">
+					<ul class="navbar-list">
+					 	<li><a href="{% url 'mfm_website:index' %}" class="on-point"><span class="default-icon icon-home"></span> <span class="hidden-link">Home</span></a></li>
+					 	<li><a href="{% url 'mfm_website:blog' %}"><span class="default-icon icon-home"></span> <span class="hidden-link">Blog</span></a></li>
+					 	<li><a href="about.html"><span class="default-icon icon-home"></span> <span class="hidden-link">About US</span></a></li>
+					 	<li><a href="contact.html"><span class="default-icon icon-phone"></span> <span class="hidden-link">Contact US</span></a></li>
+					</ul>
+				</div>
+			</nav>
+			<!-- <div class="block block-big-page-header">
+		    	<h1>
+		    		THE <br> REDEEMED <br> CHRISTIAN <br> FELLOWSHIP
+		    		WELCOME <br> TO <br> CHURCH
+		    	</h1>
+		    </div> -->
+		    <div class="bg-effect">
+		    </div>
+		    <div class="bg-effect dark-bg-effect">
+		    </div>
+		</section>
+
+		{% block content %}
+
+		{% endblock %}
+
+
+		<section class="section-footer">
+			<div class="block block-home">
+				<span>Visit us @ : </span>
+				<a href=""><i class="fa fa-facebook"></i></a> |
+				<a href=""><i class="fa fa-twitter"></i></a> |
+				<a href=""><i class="fa fa-instagram"></i></a>
+			</div>
+			<div class="block-copyright">&copy 2016</div>
+		</section>
+
+		
+		<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+	</body>
+</html>
